@@ -15,15 +15,17 @@ on:
 jobs:
   generate_plantuml:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     name: plantuml
     steps:
       - name: checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 1
       - name: plantuml
         id: plantuml
-        uses: grassedge/generate-plantuml-action@v1.5
+        uses: grassedge/generate-plantuml-action@master
         with:
           path: example
           message: "Render PlantUML files"
