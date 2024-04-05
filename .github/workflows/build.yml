@@ -1,0 +1,27 @@
+name: build
+on:
+  push:
+    paths:
+      - ./flowchart.puml
+    branches: [ main ]
+    tags:
+      - '**'
+  pull_request:
+    branches: [ main ]
+
+#env:
+#  aaa: bbb
+
+jobs:
+  generate_plantuml:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: generate and commit diagrams
+        uses: abekoh/commit-plantuml-action@1.0.3
+        with:
+          botEmail: ${{ secrets.BOT_EMAIL }}
+          botGithubToken: ${{ secrets.GITHUB_TOKEN }}
+          enableReviewComment: true

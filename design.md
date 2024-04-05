@@ -1,4 +1,3 @@
-
 ### 病気の兆候
 [パンパース「赤ちゃんの病気の兆候](https://www.jp.pampers.com/newborn/care/article/signs-of-illness-in-babies)」を全面的に参考にしました。
 発熱や嘔吐、呼吸の異常だけでなく他にも様々な可能性があることは重々承知であるものの、それらを全て書き並べてしまうと可読性が失われるし、

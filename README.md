@@ -6,4 +6,10 @@
 ![flowchart.jpg](flowchart.jpg)
 
 #### きっかけ
-[この投稿](https://twitter.com/akkie30/status/1773341405869400372)への反響が大きかったのでオープンソース化してみました
+[この投稿](https://twitter.com/akkie30/status/1773341405869400372)への反響が大きかったのでオープンソース化してみました。
+
+#### 開発スポンサーの方へ
+[ありがとうございます](https://www.amazon.jp/hz/wishlist/ls/1ZMR4CK2TJTNQ?ref_=wl_share)
+
+#### License
+MIT License
