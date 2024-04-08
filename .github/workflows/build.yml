@@ -18,7 +18,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: generate and commit diagrams
         uses: abekoh/commit-plantuml-action@1.0.3
         with:
