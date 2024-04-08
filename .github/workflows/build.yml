@@ -19,9 +19,21 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: generate and commit diagrams
-        uses: abekoh/commit-plantuml-action@1.0.3
+      - name: install plantuml
+        run: |
+          set -eux
+          sudo apt update && sudo apt install -y plantuml
+      - name: generate svg image
+        run: |
+          set -eux
+          for f in $(find -name '*.puml'); do
+            plantuml -tsvg "${f}"
+          done
+      - name: commit changes
+        uses: EndBug/add-and-commit@v9.1.4
         with:
-          botEmail: ${{ secrets.BOT_EMAIL }}
-          botGithubToken: ${{ secrets.GITHUB_TOKEN }}
-          enableReviewComment: true
+          message: 'add generated diagrams'
+          author_email: ${{ secrets.BOT_EMAIL }}
+          push: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   

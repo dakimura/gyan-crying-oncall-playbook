@@ -1,5 +1,5 @@
 @startuml
-
+skinparam backgroundColor white
 title 新生児ギャン泣き対応フローチャート
 start
 
