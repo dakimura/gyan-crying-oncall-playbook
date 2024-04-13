@@ -1,0 +1,15 @@
+@startuml
+skinparam backgroundColor #f0f0f0
+skinparam monochrome true
+title コナンくん用新生児ギャン泣き対応フローチャート
+start
+
+:泣く;
+
+repeat;
+  :腕時計型麻酔銃を打つ;
+repeat while (泣き止んだ?) is (いいえ) not (はい)
+
+stop
+
+@enduml
