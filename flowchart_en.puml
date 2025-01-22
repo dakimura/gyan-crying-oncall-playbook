@@ -1,0 +1,58 @@
+@startuml
+skinparam backgroundColor #f0f0f0
+skinparam monochrome true
+title Newborn Crying Response Flowchart
+start
+
+:Crying;
+
+repeat;
+  if (Is the diaper/clothes/bedding dirty?) then (Yes)
+    :Change the diaper/clothes/bedding;
+  else (No)
+    if (Has it been more than 2 hours since the last feeding or milk,\nor signs of hunger such as sticking out tongue, searching for the breast, shaking head?) then (Yes)
+      :Feed with breast milk/formula;
+    else (No)
+      if (Is there straining or groaning, a distended belly?\nIs the baby trying to keep the airway open by tucking their chin?) then (Yes)
+        :Try burping the baby;
+        if (Is the baby constipated?) then (Yes)
+          :Perform abdominal massage or stimulate the anus to encourage a bowel movement;
+        else (No)
+        endif
+      else (No)
+      endif
+      if (Is the baby sucking on their fingers?) then (Yes)
+        :Give a pacifier;
+      else (No)
+      endif
+      :Adjust clothes and diaper to be comfortable;
+      :Check if the baby’s nose is blocked, or if hair or threads are tightly wrapped around the body;
+      :Gently scratch or massage the head, belly, or feet;
+      :Shake a rattle (rattle toy) to move the head or eye gaze;
+      :Adjust clothing based on temperature (20–23°C in winter, 26–28°C in summer), and increase humidity;
+      :(If not done yet) Swaddle the baby with a cloth;
+      if (Is the baby’s temperature above 38.0°C or below 36.0°C, and doesn’t return to normal with changes in clothing?\nIs there continuous vomiting or change in breathing?) then (Yes)
+        :Call pediatric emergency consultation\n(dial #8000);
+        kill
+      else (No)
+      endif
+      if (Are you holding the baby?) then (No)
+        :Try holding the baby;
+      else (Yes)
+        :Walk for 5 minutes and sit for 5–8 minutes (transport response).\nTap or sway the baby.\nWalk fast, perform squats, or jumping jacks.\nTry "high-high, low-low" games;
+        :Change the baby’s holding position (vertical/horizontal), angle;
+        :Play white noise, fetal sounds, rain sounds, heartbeat sounds, dryer sounds,\nvacuum cleaner sound, ventilation fan sounds, car engine sounds (VTEC sound, HONDA SOUND SITTER),\nTakamoto Piano CM, Demaekan CM, Poison, Kafka-kun, Noh chanting, poetry singing,\nTomato-chan sound, baseball cheering sounds (jet balloon sounds) via Youtube or a smart speaker;
+        :Sing lullabies (e.g., "Kotorin no uta", "Yurikago no uta", Schubert’s lullaby);
+        :Crinkle a plastic bag;
+        :Blow air on the baby’s face or fan with a hand fan;
+        :Hold the baby’s hand;
+        :Take a deep breath yourself;
+        :Leave the baby for 300 seconds;
+      endif
+    endif
+  endif
+repeat while (Did the baby stop crying?) is (No) not (Yes)
+
+stop
+
+@enduml
